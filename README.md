@@ -1,9 +1,11 @@
-Stadis - Stand-alone Distributed System
-=======================================
+##Stadis - Stand-alone Distributed System
+
 The easiest way to learn, develop and test a distributed system.
 
-Why should I use it?
-====================
+[![Build Status](https://travis-ci.org/coocood/stadis.png?branch=master)](https://travis-ci.org/coocood/stadis)
+
+##Why should I use it?
+
 Testing distributed system is very expensive.
 
 It takes a large amount of resources, takes a lot of time to deploy and config.
@@ -19,8 +21,8 @@ You can change the topology and node state at any time by a single API call.
 Everything happens exactly the way you want.
 Every network error handling code can be easily covered.
 
-Get started
-===========
+##Get started
+
 Require Go 1.2+ installed.
 
 Stadis can be used as a library in Go application.
@@ -104,8 +106,7 @@ Then request the proxy server and record the time.
 
 The real time should be a little more than 444ms, which is the roundtrip time from 'matter.metal.gold' to 'animal.air.eagle'.
 
-Configuration
-===============
+##Configuration
 Stadis server does not use any config file, it starts with a default configuration, and you can update it by REST API call.
 
 Stadis API server maintains a virtual topology which has three level:'DataCenter', 'Rack' and 'Host'.
@@ -183,8 +184,7 @@ So the latency from 'matter.metal.gold' to 'animal.air.eagle' should be "1ms+10m
 The round trip time should be 444ms, so the total time to create a connection
 and then make a http request from 'gold' to 'eagle' should be a little more than 888ms.
 
-REST API
-================
+##REST API
 
 - Update configuration with json payload like the default config shown above.
 
@@ -230,13 +230,13 @@ REST API
 
         GET /connState?clientPort={clientPort}&serverPort={serverPort}
 
-Performance
-============
+##Performance
+
 Stadis adds an extra layer on top of tcp connection, the throughput is greatly decreased.
 On my laptop, a proxy connection with 1ms latency gets about 30MB/s throughput.
 I think it is sufficient for most of applications for testing purpose.
 Higher latency gets lower throughput which is pretty much the way raw connections work.
 
-LICENSE
-========
+##LICENSE
+
 The MIT License
