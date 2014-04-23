@@ -2,7 +2,9 @@
 
 The easiest way to learn, develop and test a distributed system.
 
+[![GoDoc](https://godoc.org/github.com/coocood/stadis?status.png)](https://godoc.org/github.com/coocood/stadis)
 [![Build Status](https://travis-ci.org/coocood/stadis.png?branch=master)](https://travis-ci.org/coocood/stadis)
+
 
 ##Why should I use it?
 
